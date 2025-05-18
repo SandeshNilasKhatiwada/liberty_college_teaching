@@ -1,15 +1,13 @@
-//hoisting
+const express = require("express");
+const app = express();
 
-hoisting(); // 5
-{
-  var hoisting = () => {
-    var a = 5;
-    console.log(a); // 5
-  };
-}
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-function hoisting() {}
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
-const hoisting = function () {};
-const hosting = ()=>{}
-
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
+});
