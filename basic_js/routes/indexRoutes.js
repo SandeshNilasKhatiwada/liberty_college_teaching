@@ -5,4 +5,13 @@ router.get("/", (req, res) => {
     message: "Welcome to the API",
   });
 });
+
+router.post("/", (req, res) => {
+  console.log(req.body);
+  console.log(req.query);
+});
+
+router.get("/:id", (req, res) => {
+  console.log(req.params);
+});
 module.exports = router;
