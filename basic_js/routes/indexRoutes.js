@@ -7,8 +7,9 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  console.log(req.body);
-  console.log(req.query);
+  // console.log(req.body);
+  // console.log(req.query);
+  console.log(req);
 });
 
 router.get("/:id", (req, res) => {
